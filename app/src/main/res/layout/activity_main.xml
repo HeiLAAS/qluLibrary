@@ -6,21 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <android.widget.Toolbar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        app:title="搜索框"
+        android:id="@+id/toolbar_id"/>
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="请输入要搜索的书名"
-        android:id="@+id/search_book_text_id"/>
+        android:id="@+id/search_book_text_id"
+        android:layout_below="@id/toolbar_id"/>
     <Button
+        android:id="@+id/search_book_button_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="搜索"
-        android:id="@+id/search_book_button_id"
-        android:layout_toRightOf="@id/search_book_text_id"/>
+        android:layout_below="@id/toolbar_id"
+        android:layout_toRightOf="@id/search_book_text_id"
+        android:hint="搜索" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listview_id"
+        android:dividerHeight="10dp"
         android:layout_below="@id/search_book_text_id"/>
 
 </RelativeLayout>
